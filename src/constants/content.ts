@@ -1,7 +1,7 @@
 /** Editable content — replace placeholders with your real memories & names */
 
 export const SITE = {
-  herName: 'My Love', // Change to her name
+  herName: 'Vampire', // Change to her name
   yourName: 'Your Best Friend',
   /** ISO date for the birthday countdown (YYYY-MM-DDTHH:mm:ss) */
   birthdayDate: '2026-07-20T23:59:59',
@@ -455,9 +455,17 @@ export const finaleLines = {
 }
 
 export const surpriseCopy = {
-  giftReady: 'A gift awaits you — no, you can’t negotiate. Open it.',
+  giftReady: 'Open it, Vampire. And no — being an “old lady” is not a valid excuse to skip gifts.',
+  afterOpenTitle: 'Happy Birthday, Vampire!',
   afterOpen:
-    'May this year wrap you in soft light, wild joy, and every beautiful thing you give so freely. I’m sorry for the days I dimmed that light — and I’m celebrating every day I get to help it shine again.',
+    'Another year older… I mean wiser… I mean — still getting called old lady by me on purpose. You’re not actually old. I just refuse to miss a single chance to tease you. Say literally anything and I’ll find a joke. That’s the deal. Bleh bleh.',
+  teases: [
+    'You: “I’m tired.” Me: “Obviously. You’re an old lady, Vampire.”',
+    'You: “Don’t call me old.” Me: “Okay Vampire.” (still calling you old)',
+    'You: “I’m not a vampire.” Me: “Then why the midnight energy, Vampire?”',
+    "You breathe wrong and somehow I still roast you. That's talent, Vampire.",
+    'Happy birthday, my favorite old lady + Vampire. Argue all you want — I’m not stopping.',
+  ],
 }
 
 export const galleryCategories = [

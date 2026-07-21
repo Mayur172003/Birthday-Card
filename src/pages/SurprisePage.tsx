@@ -7,10 +7,11 @@ import { MagneticButton } from '@/components/ui/MagneticButton'
 import { Confetti } from '@/components/effects/Confetti'
 import { FloatingBalloons } from '@/components/effects/FloatingBalloons'
 import { FloatingHearts } from '@/components/effects/FloatingHearts'
-import { SITE, gallery, surpriseCopy } from '@/constants/content'
+import { VampireTeaseAnimation } from '@/components/effects/VampireTeaseAnimation'
+import { SITE, surpriseCopy } from '@/constants/content'
 import { ROUTES } from '@/constants/routes'
 import { useCountdown } from '@/hooks/useCountdown'
-import { pad2, placeholderGradient } from '@/utils/helpers'
+import { pad2 } from '@/utils/helpers'
 import { useAudio } from '@/context/AudioContext'
 import { useEffects } from '@/context/EffectsContext'
 
@@ -22,7 +23,6 @@ export default function SurprisePage() {
   const { spawnFireworks } = useEffects()
   const navigate = useNavigate()
 
-  // Show gift when countdown done OR user skips
   const giftReady = isComplete || showGift
 
   const openGift = () => {
@@ -46,7 +46,9 @@ export default function SurprisePage() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 pb-8 text-center">
         <header className="mb-12">
-          <p className="mb-3 text-xs tracking-[0.35em] text-champagne/55 uppercase">The moment</p>
+          <p className="mb-3 text-xs font-bold tracking-[0.35em] text-champagne/55 uppercase">
+            For my Vampire
+          </p>
           <TextReveal className="font-display text-5xl text-pearl md:text-7xl" as="h1">
             Birthday Surprise
           </TextReveal>
@@ -71,12 +73,15 @@ export default function SurprisePage() {
                 </div>
               ))}
             </div>
+            <p className="mt-6 text-sm text-pearl/45">
+              Waiting for the Vampire to show up (slowly, like an old lady)…
+            </p>
             <button
               type="button"
-              className="mt-10 text-xs tracking-wider text-pearl/40 underline-offset-4 hover:text-champagne hover:underline"
+              className="mt-6 text-xs tracking-wider text-pearl/40 underline-offset-4 hover:text-champagne hover:underline"
               onClick={() => setShowGift(true)}
             >
-              Skip countdown · Open gift early
+              Skip · Vampire got impatient
             </button>
           </>
         )}
@@ -105,7 +110,9 @@ export default function SurprisePage() {
                 <div className="absolute top-6 bottom-0 left-1/2 w-8 -translate-x-1/2 bg-gradient-to-b from-champagne to-rose-gold" />
                 <div className="absolute top-2 left-1/2 h-8 w-12 -translate-x-1/2 rounded-full bg-champagne/80 blur-[1px] transition group-hover:scale-110" />
               </motion.div>
-              <p className="mt-6 text-sm tracking-[0.2em] text-champagne uppercase">Tap to open</p>
+              <p className="mt-6 text-sm tracking-[0.2em] text-champagne uppercase">
+                Tap to release the vampire
+              </p>
             </button>
           </motion.div>
         )}
@@ -117,37 +124,38 @@ export default function SurprisePage() {
               animate={{ opacity: 1, scale: 1 }}
               className="mt-6"
             >
-              <h2 className="font-display text-4xl text-gradient md:text-6xl">
-                Happy Birthday, {SITE.herName}!
+              <h2 className="font-display text-3xl text-gradient md:text-5xl">
+                {surpriseCopy.afterOpenTitle}
               </h2>
-              <p className="mx-auto mt-4 max-w-lg text-pearl/70">
+              <p className="mx-auto mt-2 text-sm tracking-wide text-champagne/70">
+                Official titles: Vampire · Old Lady · Always right (according to her)
+              </p>
+
+              <div className="relative mt-8 min-h-[20rem]">
+                <VampireTeaseAnimation />
+              </div>
+
+              <p className="mx-auto mt-8 max-w-lg font-display text-xl text-pearl/85 md:text-2xl">
                 {surpriseCopy.afterOpen}
               </p>
 
-              <div className="mx-auto mt-10 grid max-w-2xl grid-cols-3 gap-3">
-                {gallery.slice(0, 6).map((g) => (
-                  <motion.div
-                    key={g.id}
-                    initial={{ opacity: 0, y: 40, rotate: -6 }}
-                    animate={{ opacity: 1, y: 0, rotate: 0 }}
-                    transition={{ delay: 0.2 + Number(g.id) * 0.05 }}
-                    className="aspect-square overflow-hidden rounded-xl border border-white/10"
-                    style={{ background: placeholderGradient(g.id) }}
+              <ul className="mx-auto mt-8 flex max-w-lg flex-col gap-3">
+                {surpriseCopy.teases.map((line, i) => (
+                  <motion.li
+                    key={line}
+                    initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4 + i * 0.12 }}
+                    className="glass rounded-2xl px-5 py-3 text-left text-sm text-pearl/75 md:text-base"
                   >
-                    {g.image ? (
-                      <img src={g.image} alt={g.caption} className="h-full w-full object-cover" />
-                    ) : (
-                      <div className="flex h-full items-center justify-center p-2 text-center text-[10px] text-pearl/40">
-                        {g.caption}
-                      </div>
-                    )}
-                  </motion.div>
+                    {line}
+                  </motion.li>
                 ))}
-              </div>
+              </ul>
 
               <div className="mt-12">
                 <MagneticButton onClick={() => navigate(ROUTES.finale)}>
-                  Continue to Finale
+                  Okay Vampire, finale time
                 </MagneticButton>
               </div>
             </motion.div>
