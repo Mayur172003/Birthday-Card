@@ -4,7 +4,6 @@ export function getNextRoute(current: string): string | null {
   const order = [
     ROUTES.intro,
     ROUTES.story,
-    ROUTES.gallery,
     ROUTES.qualities,
     ROUTES.messages,
     ROUTES.timeline,
@@ -21,7 +20,6 @@ export function getPrevRoute(current: string): string | null {
   const order = [
     ROUTES.intro,
     ROUTES.story,
-    ROUTES.gallery,
     ROUTES.qualities,
     ROUTES.messages,
     ROUTES.timeline,

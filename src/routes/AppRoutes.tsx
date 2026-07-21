@@ -5,7 +5,6 @@ import { ROUTES } from '@/constants/routes'
 
 const IntroPage = lazy(() => import('@/pages/IntroPage'))
 const StoryPage = lazy(() => import('@/pages/StoryPage'))
-const GalleryPage = lazy(() => import('@/pages/GalleryPage'))
 const QualitiesPage = lazy(() => import('@/pages/QualitiesPage'))
 const MessagesPage = lazy(() => import('@/pages/MessagesPage'))
 const TimelinePage = lazy(() => import('@/pages/TimelinePage'))
@@ -31,7 +30,6 @@ export function AppRoutes() {
         <Routes location={location} key={location.pathname}>
           <Route path={ROUTES.intro} element={<IntroPage />} />
           <Route path={ROUTES.story} element={<StoryPage />} />
-          <Route path={ROUTES.gallery} element={<GalleryPage />} />
           <Route path={ROUTES.qualities} element={<QualitiesPage />} />
           <Route path={ROUTES.messages} element={<MessagesPage />} />
           <Route path={ROUTES.timeline} element={<TimelinePage />} />
