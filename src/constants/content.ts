@@ -396,32 +396,63 @@ export type Message = {
 export const messages: Message[] = [
   {
     id: 'msg1',
-    from: 'Your Best Friend',
-    text: 'Happy Birthday. You make my world brighter — even when you pretend you don’t know it. (You know it.)',
+    from: 'Your best friend',
+    text: 'You bring a smile on my face… and then I text “I hate you” five minutes later. Balance.',
   },
   {
     id: 'msg2',
-    from: 'A softer version of me',
-    text: 'I’m sorry for every time I made your heart ache. You deserved better from me then — and I’m working to be that better, for you.',
+    from: 'Slightly sorry edition',
+    text: 'Sorry for the times I hurt you. Still not sorry for the “I hate you” spam. That’s sacred.',
   },
   {
     id: 'msg3',
-    from: 'Your official teaser & biggest fan',
-    text: 'May this year flood you with reasons to smile so wide that even your “I’m annoyed” face can’t hide it. I love that face, by the way.',
+    from: 'Official hate-mail department',
+    text: 'Happy birthday, Vampire. I hate you. (Translation: you already know.)',
   },
 ]
 
+export type LetterLine = {
+  text: string
+  emoji?: string
+  vibe?: 'normal' | 'tease' | 'sorry' | 'fun'
+}
+
 export const letterContent = {
-  greeting: 'My dearest friend,',
-  paragraphs: [
-    'Happy birthday. Before the cake, before the wishes from everyone else — I needed this space to tell you something with my whole chest: you make me happier than I know how to explain. Like, unfairly happier. The kind that sneaks up mid-sentence and ruins my cool.',
-    'And yes, I’m going to tease you a little — because that’s us. You’re dramatic in the cutest ways, stubborn in the bravest ways, and somehow always right when I least want you to be. Don’t look so smug. Okay… look a little smug. You’ve earned it.',
-    'But I also owe you more than jokes. I’m sorry — deeply — for every moment I made you feel heartbroken, ignored, or smaller than the miracle you are. For the times my words cut, my silence stung, or my mistakes left you carrying sadness that wasn’t yours to hold. You didn’t deserve that. I hate that I ever put that weight on someone as soft-hearted and rare as you.',
-    'If I could gather those days and undo them, I would. What I can offer instead is this truth: I see you. I value you. I’m grateful you stayed. And I’m choosing — every day from here — to be gentler with your heart, because it is one of the most precious things I’ve ever been trusted with.',
-    'So on your birthday, I hope you feel celebrated loudly and loved quietly. I hope you laugh until your stomach hurts. I hope you feel light again. You deserve every soft morning, every silly night, every adventure that reminds you how wonderful you are — not someday. Now. Always.',
-  ],
-  closing: 'With all my heart (and a little teasing),',
-  signature: '— Forever yours in friendship, forever sorry when I fall short, forever proud you’re in my life',
+  greeting: 'Dear Vampire,',
+  lines: [
+    {
+      text: 'Happy birthday. Writing you an actual letter felt weirdly formal for us, but here we are anyway — ink, jokes, and all.',
+      emoji: '✉️',
+      vibe: 'fun',
+    },
+    {
+      text: 'Somehow you still manage to bring a smile on my face. Random messages, late-night talks about nothing and everything, you dumping every little update like breaking news… and I’m sitting there grinning like an idiot. Don’t get used to me admitting that.',
+      emoji: '😊',
+      vibe: 'normal',
+    },
+    {
+      text: 'And yes — I still hurt you sometimes. Wrong timing. Dumb replies. Teasing that goes one line too far. I’m sorry for those moments. Not a dramatic speech. Just a real one. You didn’t deserve that.',
+      emoji: '🙏',
+      vibe: 'sorry',
+    },
+    {
+      text: 'Also, important public record: I hate you. I will keep messaging “I hate you” for no reason, at random hours, with zero plot. I don’t actually hate you. Obviously. It’s just our stupid tradition now and I’m not quitting.',
+      emoji: '💀',
+      vibe: 'tease',
+    },
+    {
+      text: 'So that’s the friendship: you make me smile, I still mess up sometimes, and I hate you (affectionately, constantly, for no reason). Late nights, shared chaos, old-lady jokes, Vampire titles — all of it.',
+      emoji: '🦇',
+      vibe: 'tease',
+    },
+    {
+      text: 'Happy birthday. Stay roastable. Stay dramatic. And when I text “I hate you” later tonight… you already know what it means.',
+      emoji: '🎂',
+      vibe: 'fun',
+    },
+  ] as LetterLine[],
+  closing: 'Yours (unfortunately),',
+  signature: '— Your best friend who hates you (but doesn’t)',
 }
 
 export const motivationalQuotes = [
