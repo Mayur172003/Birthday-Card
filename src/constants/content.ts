@@ -12,8 +12,8 @@ export const SITE = {
 export const NAV_LINKS = [
   { path: '/', label: 'Intro' },
   { path: '/messages', label: 'Letter' },
-  { path: '/story', label: 'Memories' },
   { path: '/qualities', label: 'Qualities' },
+  { path: '/story', label: 'Memories' },
   { path: '/surprise', label: 'Surprise' },
   { path: '/finale', label: 'Finale' },
 ] as const

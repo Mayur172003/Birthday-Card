@@ -3,8 +3,8 @@ import { ROUTES } from '@/constants/routes'
 const ORDER = [
   ROUTES.intro,
   ROUTES.messages,
-  ROUTES.story,
   ROUTES.qualities,
+  ROUTES.story,
   ROUTES.surprise,
   ROUTES.finale,
 ] as const
