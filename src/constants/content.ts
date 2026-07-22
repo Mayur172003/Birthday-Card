@@ -505,7 +505,7 @@ export const secretMessage =
   'Psst… you found the hidden note. Quick truth: I’m sorry for every time I made you cry or feel alone because of me. And louder truth: you are the happiness I didn’t know I needed. Stay soft. Stay you. I’m lucky beyond words.'
 
 export const finaleLines = {
-  headline: 'Happy Birthday',
+  headline: 'Happy Birthday, Anushka',
   deserve: 'You deserve every happiness in the world — and none of the heartbreak I ever caused.',
   thankYou:
     'Thank you for being the most wonderful person in my life. For the laughs, the teases, the forgiveness, and the second chances. I promise to keep choosing kindness with you.',
@@ -513,7 +513,7 @@ export const finaleLines = {
 
 export const surpriseCopy = {
   giftReady: 'Open it, Vampire. And no — being an “old lady” is not a valid excuse to skip gifts.',
-  afterOpenTitle: 'Happy Birthday, Vampire!',
+  afterOpenTitle: 'Happy Birthday, Anushka(Vampire)!',
   afterOpen:
     'Another year older… I mean wiser… I mean — still getting called old lady by me on purpose. You’re not actually old. I just refuse to miss a single chance to tease you. Say literally anything and I’ll find a joke. That’s the deal. Bleh bleh.',
   teases: [

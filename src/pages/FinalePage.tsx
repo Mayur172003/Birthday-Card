@@ -185,7 +185,7 @@ export default function FinalePage() {
             initial={{ opacity: 0, scale: 0.8, filter: 'blur(16px)' }}
             animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-4xl text-balance text-pearl sm:text-7xl md:text-8xl lg:text-9xl"
+            className="font-display text-3xl text-balance text-pearl sm:text-5xl md:text-6xl lg:text-7xl"
           >
             {finaleLines.headline}{' '}
             <span className="text-blush" aria-hidden>
@@ -198,7 +198,7 @@ export default function FinalePage() {
               initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ duration: 1 }}
-              className="mx-auto mt-6 max-w-2xl font-display text-xl text-champagne sm:mt-8 sm:text-2xl md:text-3xl"
+              className="mx-auto mt-5 max-w-xl font-display text-base text-champagne sm:mt-6 sm:text-xl md:text-2xl"
             >
               {finaleLines.deserve}
             </motion.p>
