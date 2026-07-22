@@ -128,7 +128,7 @@ export default function SurprisePage() {
                 {surpriseCopy.afterOpenTitle}
               </h2>
               <p className="mx-auto mt-2 text-sm tracking-wide text-champagne/70">
-                Official titles: Vampire · Old Lady · Always right (according to her)
+                Official titles: Vampire · Old Lady · Always right (according to you)
               </p>
 
               <div className="relative mt-8 min-h-[20rem]">
