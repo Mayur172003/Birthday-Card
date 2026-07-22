@@ -1,7 +1,7 @@
 /** Editable content — replace placeholders with your real memories & names */
 
 export const SITE = {
-  herName: 'Vampire', // Change to her name
+  herName: 'Anushka(Vampire)', // Change to her name
   yourName: 'Your Best Friend',
   /** ISO date for the birthday countdown (YYYY-MM-DDTHH:mm:ss) */
   birthdayDate: '2026-07-20T23:59:59',
