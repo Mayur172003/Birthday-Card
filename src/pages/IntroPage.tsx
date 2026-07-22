@@ -6,7 +6,6 @@ import { StarField } from '@/components/effects/StarField'
 import { FloatingParticles } from '@/components/effects/FloatingParticles'
 import { FloatingButterflies } from '@/components/effects/FloatingButterflies'
 import { MagneticButton } from '@/components/ui/MagneticButton'
-import { MusicToggle } from '@/components/ui/MusicToggle'
 import { SITE } from '@/constants/content'
 import { ROUTES } from '@/constants/routes'
 import { useAudio } from '@/context/AudioContext'
@@ -35,10 +34,6 @@ export default function IntroPage() {
       <Suspense fallback={null}>
         <Scene3D />
       </Suspense>
-
-      <div className="absolute top-6 right-6 z-20">
-        <MusicToggle />
-      </div>
 
       <div className="relative z-10 mx-auto max-w-3xl text-center">
         <motion.p

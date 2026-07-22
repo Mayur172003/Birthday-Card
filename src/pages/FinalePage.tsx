@@ -212,9 +212,6 @@ export default function FinalePage() {
               className="mx-auto mt-10 max-w-xl text-sm leading-relaxed text-pearl/70 sm:mt-16 sm:text-base md:text-lg"
             >
               <p>{finaleLines.thankYou}</p>
-              <p className="mt-4 font-display text-lg text-champagne/90 sm:text-xl">
-                {finaleLines.tease}
-              </p>
               <span className="mt-6 block font-display text-lg text-champagne sm:text-xl">
                 — {SITE.yourName}
               </span>

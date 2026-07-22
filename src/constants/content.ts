@@ -509,7 +509,6 @@ export const finaleLines = {
   deserve: 'You deserve every happiness in the world — and none of the heartbreak I ever caused.',
   thankYou:
     'Thank you for being the most wonderful person in my life. For the laughs, the teases, the forgiveness, and the second chances. I promise to keep choosing kindness with you.',
-  tease: 'Now go be spoiled. That’s an order. (See? Still teasing. Love you.)',
 }
 
 export const surpriseCopy = {

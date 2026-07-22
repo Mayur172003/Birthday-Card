@@ -6,7 +6,6 @@ import { Typewriter } from '@/components/ui/Typewriter'
 import { letterContent, type LetterLine } from '@/constants/content'
 import { ROUTES } from '@/constants/routes'
 import { letterUnfold } from '@/animations/variants'
-import { MusicToggle } from '@/components/ui/MusicToggle'
 import { cn } from '@/utils/helpers'
 
 const vibeStyles: Record<NonNullable<LetterLine['vibe']>, string> = {
@@ -30,9 +29,6 @@ export default function MessagesPage() {
           <TextReveal className="font-display text-5xl text-pearl md:text-7xl" as="h1">
             A Letter For You
           </TextReveal>
-          <div className="mt-6 flex justify-center">
-            <MusicToggle />
-          </div>
         </header>
 
         <div className="perspective-[1400px]">

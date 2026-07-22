@@ -10,7 +10,6 @@ import { EasterEggToasts } from '@/components/effects/EasterEggToasts'
 import { HiddenMessageModal } from '@/components/layout/HiddenMessageModal'
 import { GlobalInteractions } from '@/components/layout/GlobalInteractions'
 import { useLenis } from '@/hooks/useLenis'
-import { AmbientMusic } from '@/components/effects/AmbientMusic'
 
 function AppShell() {
   useLenis()
@@ -25,7 +24,6 @@ function AppShell() {
       <EasterEggToasts />
       <HiddenMessageModal />
       <GlobalInteractions />
-      <AmbientMusic />
     </>
   )
 }

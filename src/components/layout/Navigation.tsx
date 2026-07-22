@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { HiBars3, HiXMark } from 'react-icons/hi2'
 import { NAV_LINKS } from '@/constants/content'
-import { MusicToggle } from '@/components/ui/MusicToggle'
 import { useAudio } from '@/context/AudioContext'
 import { cn } from '@/utils/helpers'
 
@@ -45,7 +44,6 @@ export function Navigation() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <MusicToggle />
             <button
               type="button"
               className="glass flex h-10 w-10 items-center justify-center rounded-full lg:hidden"
