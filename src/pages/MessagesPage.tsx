@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { PageShell } from '@/components/layout/PageShell'
 import { TextReveal } from '@/components/ui/TextReveal'
 import { Typewriter } from '@/components/ui/Typewriter'
-import { letterContent, messages, type LetterLine } from '@/constants/content'
+import { letterContent, type LetterLine } from '@/constants/content'
 import { ROUTES } from '@/constants/routes'
 import { letterUnfold } from '@/animations/variants'
 import { MusicToggle } from '@/components/ui/MusicToggle'
@@ -45,7 +45,6 @@ export default function MessagesPage() {
             style={{ transformStyle: 'preserve-3d' }}
             onAnimationComplete={() => setStarted(true)}
           >
-            {/* Soft letter decorations */}
             <motion.span
               className="pointer-events-none absolute top-6 right-7 text-2xl opacity-80"
               animate={{ y: [0, -4, 0], rotate: [0, 8, 0] }}
@@ -153,24 +152,6 @@ export default function MessagesPage() {
               </motion.div>
             )}
           </motion.article>
-        </div>
-
-        <div className="mt-16 space-y-4">
-          {messages.map((m, i) => (
-            <motion.blockquote
-              key={m.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="glass rounded-2xl p-6"
-            >
-              <p className="font-display text-xl text-pearl/90">“{m.text}”</p>
-              <footer className="mt-3 text-xs tracking-wider text-champagne/60 uppercase">
-                — {m.from}
-              </footer>
-            </motion.blockquote>
-          ))}
         </div>
       </div>
     </PageShell>

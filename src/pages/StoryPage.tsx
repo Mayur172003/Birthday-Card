@@ -44,7 +44,7 @@ export default function StoryPage() {
             Laughter · apologies · forever
           </p>
           <TextReveal className="font-display text-5xl text-pearl md:text-7xl" as="h1">
-            Our Story
+            Memories
           </TextReveal>
           <p className="mx-auto mt-4 max-w-lg text-pearl/55">
             The happy parts, the teasing parts, and the honest sorry — all of it is ours.

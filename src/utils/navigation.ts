@@ -1,33 +1,22 @@
 import { ROUTES } from '@/constants/routes'
 
+const ORDER = [
+  ROUTES.intro,
+  ROUTES.messages,
+  ROUTES.story,
+  ROUTES.qualities,
+  ROUTES.surprise,
+  ROUTES.finale,
+] as const
+
 export function getNextRoute(current: string): string | null {
-  const order = [
-    ROUTES.intro,
-    ROUTES.story,
-    ROUTES.qualities,
-    ROUTES.messages,
-    ROUTES.timeline,
-    ROUTES.moments,
-    ROUTES.surprise,
-    ROUTES.finale,
-  ]
-  const idx = order.indexOf(current as (typeof order)[number])
-  if (idx === -1 || idx === order.length - 1) return null
-  return order[idx + 1]
+  const idx = ORDER.indexOf(current as (typeof ORDER)[number])
+  if (idx === -1 || idx === ORDER.length - 1) return null
+  return ORDER[idx + 1]
 }
 
 export function getPrevRoute(current: string): string | null {
-  const order = [
-    ROUTES.intro,
-    ROUTES.story,
-    ROUTES.qualities,
-    ROUTES.messages,
-    ROUTES.timeline,
-    ROUTES.moments,
-    ROUTES.surprise,
-    ROUTES.finale,
-  ]
-  const idx = order.indexOf(current as (typeof order)[number])
+  const idx = ORDER.indexOf(current as (typeof ORDER)[number])
   if (idx <= 0) return null
-  return order[idx - 1]
+  return ORDER[idx - 1]
 }

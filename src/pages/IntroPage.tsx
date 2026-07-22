@@ -69,7 +69,7 @@ export default function IntroPage() {
             className="animate-pulse-glow px-10 py-4 text-base"
             onClick={() => {
               play('whoosh')
-              navigate(ROUTES.story)
+              navigate(ROUTES.messages)
             }}
           >
             Begin the Journey

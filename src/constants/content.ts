@@ -11,11 +11,9 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { path: '/', label: 'Intro' },
-  { path: '/story', label: 'Our Story' },
-  { path: '/qualities', label: 'Qualities' },
   { path: '/messages', label: 'Letter' },
-  { path: '/timeline', label: 'Timeline' },
-  { path: '/moments', label: 'Moments' },
+  { path: '/story', label: 'Memories' },
+  { path: '/qualities', label: 'Qualities' },
   { path: '/surprise', label: 'Surprise' },
   { path: '/finale', label: 'Finale' },
 ] as const
@@ -224,71 +222,81 @@ export type Quality = {
   title: string
   description: string
   gradient: string
+  image?: string
 }
 
 export const qualities: Quality[] = [
   {
+    id: 'trekker',
+    title: 'Trekker',
+    description:
+      'You actually like trekking — mountains, mist, tired legs, the whole thing. This photo is proof. While I’m over here calling you Vampire and old lady, you’re out there climbing like it’s a casual Sunday. Respect. (Also slightly jealous. Don’t tell anyone.)',
+    gradient: 'from-[#3d5a4a] to-[#1a2e24]',
+    image: '/images/memory-14.jpeg',
+  },
+  {
     id: 'kind',
     title: 'Kind',
     description:
-      'You soften the world without asking for credit. Even when I’m being difficult (don’t deny it — you know), your kindness somehow finds me anyway.',
+      'You’re kind in the quiet ways — checking in, listening properly, caring even when nobody asked you to. Soft smile, soft heart, zero performance. That’s why “kind” sticks on you so easily.',
     gradient: 'from-[#3d6b6b] to-[#1a2e2e]',
+    image: '/images/memory-06.jpeg',
   },
   {
     id: 'beautiful',
     title: 'Beautiful',
     description:
-      'Yes, you’re stunning — and no, I’m not flattering you for birthday points. Your beauty is the way you light up a room and still check if everyone else is okay.',
+      'Yeah, you’re beautiful. Not writing a speech about it. This photo already did the job. Vampire in a saree still somehow looks like an old lady who dressed up too well — and I’m still going to tease you for it.',
     gradient: 'from-[#8b5a6b] to-[#3a2430]',
+    image: '/images/memory-15.jpeg',
   },
   {
-    id: 'strong',
-    title: 'Strong',
+    id: 'pictures',
+    title: 'Picture Person',
     description:
-      'You’ve carried more than you should have — including, sometimes, the weight I put on you. Your strength isn’t loud. It’s elegant. And I’m proud of you.',
-    gradient: 'from-[#a68b5b] to-[#3d3220]',
+      'Proof you like taking pictures. Pose ready, flowers in hair, full main-character setup. I’m not even surprised your profile tells all. Keep clicking, Vampire.',
+    gradient: 'from-[#4a6b3d] to-[#1e2e1a]',
+    image: '/images/memory-11.jpeg',
+  },
+  {
+    id: 'travel',
+    title: 'Always Ready',
+    description:
+      'Say “travel” and you’re already packed in your head. Mountains, random trips, “let’s go” energy — this photo is evidence. Old lady? Please. You’re always ready to go out.',
+    gradient: 'from-[#5a7a8b] to-[#1e2a32]',
+    image: '/images/memory-08.jpeg',
   },
   {
     id: 'funny',
     title: 'Funny',
     description:
-      'You roast me with Olympic precision and still make it feel like affection. Never stop. My ego can take it. Mostly.',
+      'This face. This pose. This hat drama. You’re funny without even trying — and when you do try, it’s worse (for me). Keep being chaotic, Vampire. Free entertainment.',
     gradient: 'from-[#6b5a8b] to-[#2a2438]',
-  },
-  {
-    id: 'smart',
-    title: 'Smart',
-    description:
-      'You see through people — including me — which is terrifying and comforting. Keep that beautiful, sharp mind. The world needs it. So do I.',
-    gradient: 'from-[#5a7a8b] to-[#1e2a32]',
+    image: '/images/memory-07.jpeg',
   },
   {
     id: 'supportive',
     title: 'Supportive',
     description:
-      'You show up. Even on days I didn’t deserve it. That’s not something I take lightly anymore — it’s something I thank you for, every quiet chance I get.',
+      'You show up when it matters. You listen, you stay, you make hard days easier without making a big deal out of it. That’s what supportive looks like — and this is you.',
     gradient: 'from-[#6b8b5a] to-[#24301e]',
+    image: '/images/memory-02.jpeg',
   },
   {
     id: 'caring',
     title: 'Caring',
     description:
-      'You notice the tiny things. The mood shifts. The unsaid sentences. I’m sorry for the times I didn’t match that care — and I’m trying to.',
+      'You care in small, steady ways — checking in, noticing things, being gentle when someone needs it. Soft presence, real heart. That’s why caring fits you.',
     gradient: 'from-[#8b6b5a] to-[#32241e]',
+    image: '/images/memory-13.jpeg',
   },
   {
     id: 'creative',
     title: 'Creative',
     description:
-      'You turn feelings into beauty. Ideas into sparkle. Even your chaos has aesthetic. It’s unfair, honestly.',
+      'You paint. You make things. This sketchbook page is proof — colors, details, actual talent. Creative isn’t a compliment here, it’s just facts. Keep painting, Vampire.',
     gradient: 'from-[#8b5a7a] to-[#321e2a]',
-  },
-  {
-    id: 'inspiring',
-    title: 'Inspiring',
-    description:
-      'Being around you makes me want to be softer, braver, better. If that’s not magic, I don’t know what is. Happy birthday, my favorite spark.',
-    gradient: 'from-[#5a6b8b] to-[#1e2432]',
+    image: '/images/memory-16.jpeg',
   },
 ]
 
@@ -448,6 +456,26 @@ export const letterContent = {
     {
       text: 'Happy birthday. Stay roastable. Stay dramatic. And when I text “I hate you” later tonight… you already know what it means.',
       emoji: '🎂',
+      vibe: 'fun',
+    },
+    {
+      text: 'Remember our late nights? You talking about your day in full detail, me pretending I’m annoyed while actually waiting for the next message. That’s peak best-friend behaviour and I’m not ashamed.',
+      emoji: '🌙',
+      vibe: 'normal',
+    },
+    {
+      text: 'You cry at a natak, click the world’s worst movie selfie by accident, get called Vampire and old lady on loop — and somehow I’m the one laughing harder. Thanks for the free comedy, truly.',
+      emoji: '😂',
+      vibe: 'tease',
+    },
+    {
+      text: 'If I ever go quiet or get weird for a bit, it isn’t because I stopped caring. Sometimes I’m just bad at saying the normal thing. Then I recover the only way I know: “I hate you.”',
+      emoji: '📱',
+      vibe: 'sorry',
+    },
+    {
+      text: 'Anyway — another year of you existing means another year of me having someone to spam, roast, and accidentally care about. Don’t make it weird. I already said too much.',
+      emoji: '✨',
       vibe: 'fun',
     },
   ] as LetterLine[],

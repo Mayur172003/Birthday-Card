@@ -1,10 +1,8 @@
 export const ROUTES = {
   intro: '/',
+  messages: '/messages',
   story: '/story',
   qualities: '/qualities',
-  messages: '/messages',
-  timeline: '/timeline',
-  moments: '/moments',
   surprise: '/surprise',
   finale: '/finale',
   secret: '/secret',
@@ -12,11 +10,9 @@ export const ROUTES = {
 
 export const JOURNEY_ORDER = [
   ROUTES.intro,
+  ROUTES.messages,
   ROUTES.story,
   ROUTES.qualities,
-  ROUTES.messages,
-  ROUTES.timeline,
-  ROUTES.moments,
   ROUTES.surprise,
   ROUTES.finale,
 ] as const

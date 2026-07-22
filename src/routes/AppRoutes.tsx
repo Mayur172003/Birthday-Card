@@ -7,8 +7,6 @@ const IntroPage = lazy(() => import('@/pages/IntroPage'))
 const StoryPage = lazy(() => import('@/pages/StoryPage'))
 const QualitiesPage = lazy(() => import('@/pages/QualitiesPage'))
 const MessagesPage = lazy(() => import('@/pages/MessagesPage'))
-const TimelinePage = lazy(() => import('@/pages/TimelinePage'))
-const MomentsPage = lazy(() => import('@/pages/MomentsPage'))
 const SurprisePage = lazy(() => import('@/pages/SurprisePage'))
 const FinalePage = lazy(() => import('@/pages/FinalePage'))
 const SecretPage = lazy(() => import('@/pages/SecretPage'))
@@ -29,11 +27,9 @@ export function AppRoutes() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path={ROUTES.intro} element={<IntroPage />} />
+          <Route path={ROUTES.messages} element={<MessagesPage />} />
           <Route path={ROUTES.story} element={<StoryPage />} />
           <Route path={ROUTES.qualities} element={<QualitiesPage />} />
-          <Route path={ROUTES.messages} element={<MessagesPage />} />
-          <Route path={ROUTES.timeline} element={<TimelinePage />} />
-          <Route path={ROUTES.moments} element={<MomentsPage />} />
           <Route path={ROUTES.surprise} element={<SurprisePage />} />
           <Route path={ROUTES.finale} element={<FinalePage />} />
           <Route path={ROUTES.secret} element={<SecretPage />} />
