@@ -48,7 +48,7 @@ export function QualityCard({ quality, index }: { quality: Quality; index: numbe
               <div className="border-t border-white/10 bg-midnight/80 px-4 py-3 backdrop-blur-md">
                 <p className="font-display text-2xl text-pearl">{quality.title}</p>
                 <p className="mt-0.5 text-[10px] tracking-[0.2em] text-champagne/70 uppercase">
-                  Hover or Click to reveal
+                  Hover or Double Click to reveal
                 </p>
               </div>
             </>
@@ -59,7 +59,7 @@ export function QualityCard({ quality, index }: { quality: Quality; index: numbe
                 {quality.title}
               </p>
               <p className="relative mt-3 text-xs tracking-[0.2em] text-pearl/50 uppercase">
-                Hover or Click to reveal
+                Hover or Double Click to reveal
               </p>
             </>
           )}
